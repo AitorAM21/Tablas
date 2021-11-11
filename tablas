@@ -1,0 +1,59 @@
+CREATE TABLE "Usuario" (
+	"Id"	INTEGER,
+	"email"	VARCHAR(40) NOT NULL,
+	"nombre"	VARCHAR(40) NOT NULL,
+	"pasword"	VARCHAR(21) NOT NULL,
+	"created_at"	DATETIME,
+	PRIMARY KEY("Id" AUTOINCREMENT)
+);
+CREATE TABLE "Usuario_historic" (
+	"Id"	INTEGER,
+	"created_at"	DATETIME,
+	"ip"	VARCHAR(30) NOT NULL,
+	"usuario_id"	VARCHAR(30) NOT NULL,
+	PRIMARY KEY("Id" AUTOINCREMENT)
+);
+CREATE TABLE "Carrito" (
+	"Id"	INTEGER,
+	"created_at"	DATETIME,
+	"usuario_id"	VARCHAR(30) NOT NULL,
+	"producti_id"	VARCHAR(30) NOT NULL,
+	"cantidad"	VARCHAR(30),
+	"precio"	VARCHAR(30) NOT NULL,
+	PRIMARY KEY("Id" AUTOINCREMENT)
+);
+CREATE TABLE "Producto" (
+	"Id "	INTEGER,
+	"created_at"	DATETIME,
+	"nombre"	VARCHAR(30) NOT NULL,
+	"precio"	VARCHAR(30) NOT NULL,
+	"cantidad"	VARCHAR(30),
+	PRIMARY KEY("Id ")
+);
+CREATE TABLE "Post" (
+	"Id"	INTEGER,
+	"created_it"	DATETIME,
+	"titulo"	VARCHAR(30) NOT NULL,
+	"cuerpo"	TEXT NOT NULL,
+	"categoria_id"	VARCHAR(30) NOT NULL,
+	PRIMARY KEY("Id" AUTOINCREMENT)
+);
+CREATE TABLE "Categorias" (
+	"Id"	INTEGER,
+	"created_at"	DATETIME,
+	"titulo"	VARCHAR(20) NOT NULL,
+	PRIMARY KEY("Id" AUTOINCREMENT)
+);
+CREATE TABLE "Etiquetas" (
+	"Id"	INTEGER,
+	"titulo"	VARCHAR(20) NOT NULL,
+	"created_at"	DATETIME,
+	PRIMARY KEY("Id")
+);
+
+
+
+
+
+
+
